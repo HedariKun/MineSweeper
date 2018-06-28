@@ -16,11 +16,13 @@ class cell {
             ctx.fillStyle = "rgba(150, 151, 151, 1)";
             ctx.fillRect(this.x, this.y, this.w, this.h);
             ctx.restore();
+            if(!this.marked){
+                ctx.fillText(this.nearMines, this.x + this.w/2, this.y+this.h/2);
+            }
         }
         if(this.marked){
             ctx.fillRect(this.x + this.w/2, this.y+this.h/2, 10, 10);
         } else {
-            ctx.fillText(this.nearMines, this.x + this.w/2, this.y+this.h/2);
         }
         ctx.beginPath();
         ctx.moveTo(this.x, this.y);
