@@ -138,7 +138,6 @@ function update(){
 function checkCells(i, g){
     if(cells[i][g].checked) return;
     let m = 0;
-    console.log("hello");
     if(i-1 >=0){
         m = cells[i-1][g].hasMine ? ++m : m;
     }
