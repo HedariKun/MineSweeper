@@ -46,7 +46,7 @@ function setMine(){
     let i = Math.floor(Math.random() * columns);
     let g = Math.floor(Math.random() * rows);
     let c = cells[i][g];
-    if(c.hasMine){
+    if(c.hasMine || (i == 0 && g == 0)){
         return setMine();
     } else {
         c.hasMine = true;
