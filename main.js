@@ -34,6 +34,7 @@ function setUp(){
         cells.push(row);
     }
     minedCells = [];
+    markedCells = [];
     for(let i = 0; i < mines; i++){
         setMine();
     }
