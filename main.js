@@ -68,6 +68,7 @@ window.onmousedown = (e)=>{
     let g = Math.floor(e.clientY * rows / canvas.height);
     if(i >= columns || g >= rows)
         return;
+    if(selectedCell.marked) return; 
     checkCells(i, g);
     if(selectedCell.hasMine){
         setUp();
